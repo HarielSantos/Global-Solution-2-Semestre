@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Serviços e Direitos | CitizenTech</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Atalho de acessibilidade para navegação via teclado -->
+  <a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <!-- Menu Semântico Padronizado -->
+  <header>
+    <nav aria-label="Navegação Principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="solucao.html" aria-current="page">Solução</a></li>
+        <li><a href="impacto.html">Impacto</a></li>
+        <li><a href="equipe.html">Equipe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal Exclusivo -->
+  <main id="conteudo">
+    <!-- Bloco 1: Apresentação da Ferramenta -->
+    <section class="apresentacao-solucao">
+      <h1>Consulta Interativa de Direitos e Serviços</h1>
+      <p>Selecione uma área ou digite uma palavra-chave para descobrir quais benefícios e serviços públicos você e sua família têm direito de acessar.</p>
+    </section>
+
+    <!-- Bloco 2: Controles da Simulação (Filtros e Busca) [F04-02] -->
+    <section class="area-filtros">
+      <h2>Encontre o que você precisa</h2>
+
+      <!-- Busca por texto -->
+      <div class="campo-busca">
+        <label for="busca-termo">Buscar por nome ou palavra-chave:</label>
+        <input type="search" id="busca-termo" placeholder="Ex.: Farmácia Popular, BPC, Tarifa Social...">
+      </div>
+      
+      <!-- Filtro por categoria -->
+      <div class="campo-categoria">
+        <label for="filtro-categoria">Ou filtre por área:</label>
+        <select id="filtro-categoria">
+          <option value="todos">Todos os serviços</option>
+          <option value="saude">Saúde e Medicamentos</option>
+          <option value="renda">Renda e Benefícios Sociais</option>
+          <option value="documentos">Documentos e Cidadania</option>
+          <option value="idoso">Direitos da Pessoa Idosa</option>
+        </select>
+      </div>
+
+      <!-- Contador dinâmico de feedback acessível -->
+      <p id="contador-resultados" aria-live="polite">Carregando serviços disponíveis...</p>
+    </section>
+
+    <!-- Bloco 3: Vitrine onde o JS vai desenhar os 10 cartões -->
+    <section class="area-resultados">
+      <h2>Serviços Encontrados</h2>
+      <div id="vitrine-servicos" class="grade-servicos" aria-live="polite">
+        <!-- preencher dinamicamente via JS -->
+      </div>
+    </section>
+
+    <!-- Bloco 4: Nenhuma página sem saída (Diferencial da página 22) -->
+    <section class="chamada-ajuda">
+      <p>Ficou com alguma dúvida sobre como solicitar um benefício?</p>
+      <a href="impacto.html">Peça orientação gratuita em nossa página de Impacto</a>
+    </section>
+  </main> <!-- FECHAMENTO CORRETO DO MAIN -->
+
+  <!-- Rodapé Semântico fora do main -->
+  <footer>
+    <p>Global Solution 2026/2 · Engenharia de Software FIAP · Projeto CitizenTech</p>
+  </footer>
+
+  <!-- Scripts chamados na ordem certa antes de fechar o body -->
+  <script src="js/dados.js"></script>
+  <script src="js/simulacao.js"></script>
+</body>
+</html>

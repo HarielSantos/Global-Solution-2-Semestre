@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cidadão Conectado | Serviços e Direitos Acessíveis</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Atalho de acessibilidade para teclado (Requisito 06) -->
+  <a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <!-- Barra de Acessibilidade (Diferencial de Desempate - Página 22 do PDF) -->
+  <aside class="barra-acessibilidade" aria-label="Ferramentas de Acessibilidade">
+    <div class="conteiner-acessibilidade">
+      <span>Acessibilidade:</span>
+      <button type="button" id="btn-contraste" aria-label="Alternar modo de alto contraste">Alto Contraste</button>
+      <button type="button" id="btn-aumentar-fonte" aria-label="Aumentar o tamanho do texto">A+ Aumentar Fonte</button>
+      <button type="button" id="btn-diminuir-fonte" aria-label="Diminuir o tamanho do texto">A- Diminuir Fonte</button>
+    </div>
+  </aside>
+
+  <!-- Cabeçalho e Menu Semântico Padronizado (Requisito 02) -->
+  <header>
+    <div class="conteiner-topo">
+      <div class="marca">
+        <p class="logo-texto">Cidadão<strong>Conectado</strong></p>
+      </div>
+      <nav aria-label="Navegação Principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="solucao.html">Solução</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="equipe.html">Equipe</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal Exclusivo -->
+  <main id="conteudo">
+    <!-- Bloco 1: Destaque Principal (Hero) -->
+    <section class="destaque-home">
+      <h1>Tecnologia Cidadã: Seus Direitos em um Só Lugar</h1>
+      <p class="subtitulo">
+        Uma plataforma simplificada criada para apoiar idosos e cidadãos com baixa familiaridade digital a consultar e acessar benefícios sociais, saúde, documentos e aposentadoria sem intermediários.
+      </p>
+      <div class="botoes-hero">
+        <a href="solucao.html" class="botao-destaque">Acessar Simulador de Direitos</a>
+        <a href="#problema" class="botao-secundario">Entender o Desafio</a>
+      </div>
+    </section>
+
+    <!-- Bloco 2: Quem é o Cidadão e os Dados Reais do Problema (Requisito 01 da GS) -->
+    <section id="problema" class="secao-problema">
+      <h2>O Desafio: O Abismo da Exclusão Digital no Brasil</h2>
+      <p>
+        O avanço rápido da digitalização pública transformou os smartphones na principal porta de entrada para direitos fundamentais. No entanto, para mais de 32 milhões de idosos e pessoas com baixa literacia digital, aplicativos com interfaces complexas, termos técnicos e senhas cheias de regras tornaram-se uma barreira burocrática intransponível.
+      </p>
+
+      <!-- Painel Estatístico com Fontes Oficiais e Links Externos Seguros [F01-05] -->
+      <article class="painel-estatisticas">
+        <h3>O Retrato da Vulnerabilidade Digital no Brasil</h3>
+        
+        <div class="linha-dados">
+          <div class="dado-item">
+            <p class="numero-destaque">32,1 Milhões</p>
+            <p>de pessoas com 60 anos ou mais vivem no Brasil (15,6% da população total).</p>
+            <p class="link-fonte">
+              Fonte: <a href="https://censo2022.ibge.gov.br/" target="_blank" rel="noopener noreferrer">IBGE — Censo Demográfico</a>
+            </p>
+          </div>
+
+          <div class="dado-item">
+            <p class="numero-destaque">+8 Milhões</p>
+            <p>de idosos permanecem totalmente desconectados e sem acesso à internet no país.</p>
+            <p class="link-fonte">
+              Fonte: <a href="https://www.ibge.gov.br/estatisticas/sociais/populacao/17270-pnad-continua.html" target="_blank" rel="noopener noreferrer">IBGE — PNAD Contínua TIC</a>
+            </p>
+          </div>
+
+          <div class="dado-item">
+            <p class="numero-destaque">66,5%</p>
+            <p>dos idosos sem internet apontam a falta de conhecimento como o motivo principal de ficarem de fora.</p>
+            <p class="link-fonte">
+              Fonte: <a href="https://agenciadenoticias.ibge.gov.br/" target="_blank" rel="noopener noreferrer">IBGE — Agência de Notícias (PNAD TIC)</a>
+            </p>
+          </div>
+
+          <div class="dado-item">
+            <p class="numero-destaque">Apenas 41,1%</p>
+            <p>dos brasileiros conectados conseguem usar a rede para acessar serviços públicos eletrônicos.</p>
+            <p class="link-fonte">
+              Fonte: <a href="https://cetic.br/pt/pesquisa/domicilios/" target="_blank" rel="noopener noreferrer">Cetic.br | NIC.br — TIC Domicílios</a>
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Bloco 3: Como Funciona em 3 Passos Simples (Critério 03 do PDF da GS) -->
+    <section class="como-funciona">
+      <h2>Como a Plataforma Funciona</h2>
+      <p>Desenvolvemos uma experiência pensada para quem tem dificuldade de navegação:</p>
+      
+      <div class="passos-grid">
+        <article class="card-passo">
+          <span class="passo-numero">1</span>
+          <h3>Escolha o que Precisa</h3>
+          <p>Navegue por categorias com botões grandes ou faça buscas simples por termos como "remédio", "energia" ou "aposentadoria".</p>
+        </article>
+
+        <article class="card-passo">
+          <span class="passo-numero">2</span>
+          <h3>Entenda seus Direitos</h3>
+          <p>Veja se você tem direito ao benefício em linguagem clara, direta e livre de termos jurídicos complicados.</p>
+        </article>
+
+        <article class="card-passo">
+          <span class="passo-numero">3</span>
+          <h3>Saiba Como Solicitar</h3>
+          <p>Receba a lista com documentos necessários e os pontos de atendimento físico mais próximos (como CRAS ou postos de saúde).</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Bloco 4: Quem Participa do Ecossistema (Critério 05 do PDF da GS) -->
+    <section class="secao-ecossistema">
+      <h2>Nosso Ecossistema Integrado</h2>
+      <p>Conecta o cidadão às principais entidades públicas e comunitárias:</p>
+      <ul>
+        <li><strong>Gov.br & Previdência Social (INSS):</strong> centralização das orientações oficiais sobre benefícios e aposentadorias.</li>
+        <li><strong>Rede SUAS (CRAS e CREAS):</strong> direcionamento para o atendimento social presencial e inscrição no Cadastro Único (CadÚnico).</li>
+        <li><strong>SUS e Farmácia Popular:</strong> localização facilitada para retirada de remédios gratuitos e agendamentos básicos.</li>
+        <li><strong>Centros Comunitários e Famílias:</strong> ferramenta acessível para que cuidadores e familiares auxiliem a pessoa idosa com autonomia.</li>
+      </ul>
+    </section>
+
+    <!-- Bloco 5: Conexão com os ODS da ONU (Páginas 11 e 20 do PDF da GS) -->
+    <section class="secao-ods">
+      <h2>Compromisso com os ODS da ONU</h2>
+      <article class="card-ods">
+        <h3>ODS 10 — Redução das Desigualdades</h3>
+        <p>
+          A plataforma contribui diretamente para a <strong>Meta 10.2 da Agenda 2030</strong> ao garantir o empoderamento e a inclusão social, econômica e digital de idosos e pessoas em situação de vulnerabilidade, garantindo que o avanço tecnológico reduza desigualdades em vez de ampliá-las.
+        </p>
+        <p class="link-fonte">
+          Conheça a meta oficial: 
+          <a href="https://brasil.un.org/pt-br/sdgs/10" target="_blank" rel="noopener noreferrer">
+            ONU Brasil — ODS 10: Redução das Desigualdades
+          </a>
+        </p>
+      </article>
+    </section>
+
+    <!-- Bloco 6: Nenhuma Página sem Saída (Diferencial da Página 22) -->
+    <section class="chamada-acao">
+      <h2>Comece a Consultar Agora Mesmo</h2>
+      <p>Teste o nosso simulador interativo e descubra quais direitos estão disponíveis para você e sua família.</p>
+      <a href="solucao.html" class="botao-destaque">Acessar o Simulador de Direitos</a>
+    </section>
+  </main> <!-- Fechamento correto do main! -->
+
+  <!-- Rodapé Semântico -->
+  <footer>
+    <p>Global Solution 2026/2 · Engenharia de Software FIAP · Projeto CitizenTech</p>
+  </footer>
+
+</body>
+</html>
