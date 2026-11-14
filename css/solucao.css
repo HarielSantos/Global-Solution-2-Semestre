@@ -1,0 +1,51 @@
+/* PÁGINA SOLUÇÃO */
+.apresentacao-solucao { max-width: 850px; }
+
+.area-filtros {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 1rem 1.5rem;
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.area-filtros h2, #contador-resultados { grid-column: 1 / -1; margin: 0; }
+
+.campo-busca, .campo-categoria { min-width: 0; }
+
+.area-resultados { margin-top: 2.5rem; }
+
+.grade-servicos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.grade-servicos > * {
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background: #fff;
+  box-shadow: var(--sombra);
+}
+
+.chamada-ajuda {
+  padding: 2rem;
+  border-radius: var(--raio);
+  background: #eaf2ff;
+}
+
+/* Responsividade — Solução */
+@media (max-width: 980px) {
+  .grade-servicos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 680px) {
+  .grade-servicos, .area-filtros { grid-template-columns: minmax(0, 1fr); }
+  .area-filtros h2, #contador-resultados { grid-column: auto; }
+  .area-filtros { padding: 1.4rem; }
+}

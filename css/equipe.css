@@ -1,0 +1,26 @@
+/* PÁGINA EQUIPE */
+.conteiner-equipe {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.conteiner-equipe > h2 { grid-column: 1 / -1; }
+
+.cartao-membro {
+  padding: 2rem;
+  border: 1px solid var(--borda);
+  border-top: 5px solid var(--azul);
+  border-radius: var(--raio);
+  background: #fff;
+  box-shadow: var(--sombra);
+}
+
+.cartao-membro h3 { margin-top: 0; }
+
+/* Responsividade — Equipe */
+@media (max-width: 680px) {
+  .conteiner-equipe { grid-template-columns: minmax(0, 1fr); }
+  .conteiner-equipe > h2 { grid-column: auto; }
+  .cartao-membro { padding: 1.4rem; }
+}

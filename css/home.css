@@ -1,0 +1,106 @@
+/* PÁGINA INICIAL */
+.destaque-home {
+  padding: clamp(2rem, 6vw, 5rem);
+  border: 1px solid var(--borda);
+  border-radius: 26px;
+  background: linear-gradient(115deg, #fff 0%, #f6f9ff 58%, #e1edff 100%);
+}
+
+.destaque-home h1 { max-width: 760px; margin-top: 0; }
+
+.subtitulo { max-width: 750px; font-size: 1.25rem; }
+
+.botoes-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.secao-problema, .como-funciona, .secao-ecossistema, .secao-ods { scroll-margin-top: 1.5rem; }
+
+.painel-estatisticas, .card-ods, .secao-ecossistema {
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.linha-dados {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));  gap: 1rem;
+}
+
+.dado-item {
+  min-width: 0;
+  padding: 1.25rem;
+  background: #f5f9ff;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+}
+
+.numero-destaque {
+  margin: 0 0 .5rem;
+  color: var(--azul-escuro);
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.link-fonte { font-size: .9rem; overflow-wrap: anywhere; }
+
+.passos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.card-passo {
+  min-width: 0;
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.passo-numero {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--azul);
+  color: #fff;
+  font-weight: 800;
+}
+
+.secao-ecossistema li, .card-ods p { margin-bottom: .8rem; }
+
+.chamada-acao {
+  padding: 2.5rem;
+  border-radius: var(--raio);
+  background: var(--azul-escuro);
+  color: #fff;
+  text-align: center;
+}
+
+.chamada-acao h2 { color: #fff; }
+
+/* Responsividade — Home */
+@media (max-width: 980px) {
+  .linha-dados { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .passos-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 680px) {
+  .linha-dados, .passos-grid { grid-template-columns: minmax(0, 1fr); }
+  .botoes-hero { flex-direction: column; }
+  .botoes-hero a { width: 100%; }
+  .destaque-home, .painel-estatisticas, .card-passo, .secao-ecossistema, .card-ods { padding: 1.4rem; }
+}
+
+@media (max-width: 420px) {
+  .destaque-home h1 { font-size: 1.85rem; }
+}
