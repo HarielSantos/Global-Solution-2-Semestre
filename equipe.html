@@ -2,39 +2,52 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <!-- Faz a página se ajustar certinho à tela do celular [F03-02] -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nossa Equipe</title>
-  
-  <!-- Liga o HTML ao arquivo do CSS [F01-05] -->
+  <title>Nossa Equipe | Cidadão Conectado</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/equipe.css">
+  <link rel="icon" type="image/png" href="img/logo-sem-palavras.png">
 </head>
 <body>
 
-  <!-- Acessibilidade: atalho para quem navega por teclado ir direto ao conteúdo -->
+  <!-- Atalho de acessibilidade para teclado -->
   <a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
 
-  <!-- Cabeçalho e Menu Semântico (Requisito 02 da GS) -->
+  <!-- Barra de Acessibilidade Padronizada -->
+  <aside class="barra-acessibilidade" aria-label="Ferramentas de Acessibilidade">
+    <div class="conteiner-acessibilidade">
+      <span>Acessibilidade:</span>
+      <button type="button" id="btn-contraste" aria-label="Alternar modo de alto contraste">Alto Contraste</button>
+      <button type="button" id="btn-aumentar-fonte" aria-label="Aumentar o tamanho do texto">A+ Aumentar Fonte</button>
+      <button type="button" id="btn-diminuir-fonte" aria-label="Diminuir o tamanho do texto">A- Diminuir Fonte</button>
+    </div>
+  </aside>
+
+  <!-- Cabeçalho e Menu Semântico -->
   <header>
-    <nav aria-label="Navegação Principal">
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="solucao.html">Solução</a></li>
-        <li><a href="impacto.html">Impacto</a></li>
-        <li><a href="equipe.html" aria-current="page">Equipe</a></li>
-      </ul>
-    </nav>
+    <div class="conteiner-topo">
+      <div class="marca">
+        <img src="img/logo-sem-palavras.png" alt="Logotipo Cidadão Conectado: dois idosos conectados por sinal de rede">
+        <p class="logo-texto">Cidadão<strong>Conectado</strong></p>
+      </div>
+      <nav aria-label="Navegação Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="solucao.html">Solução</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="equipe.html" aria-current="page">Equipe</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Início do conteúdo principal exclusivo desta página -->
   <main id="conteudo">
     <h1>Nossa Equipe</h1>
 
-    <!-- Seção que agrupa todos os integrantes da equipe -->
     <section class="conteiner-equipe">
       <h2>Integrantes do Grupo</h2>
 
-      <!-- Integrante 1  -->
+      <!-- Integrante 1 -->
       <article class="cartao-membro">
         <h3>Hariel Santos Da Silva</h3>
         <p><strong>RM:</strong> rm570145</p>
@@ -64,10 +77,11 @@
     </section>
   </main>
 
-  <!-- Rodapé padrão compartilhado em todas as páginas -->
   <footer>
     <p>Global Solution 2026/2 · Engenharia de Software FIAP · Projeto CitizenTech</p>
   </footer>
 
+  <!-- Script de acessibilidade -->
+  <script src=""></script>
 </body>
 </html>

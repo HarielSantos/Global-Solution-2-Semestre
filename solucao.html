@@ -5,22 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simulador de Serviços e Direitos | CitizenTech</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/solucao.css">
+  <link rel="icon" type="image/png" href="img/logo-sem-palavras.png">
 </head>
 <body>
 
   <!-- Atalho de acessibilidade para navegação via teclado -->
   <a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
 
+  <!-- Barra de Acessibilidade Padronizada -->
+  <aside class="barra-acessibilidade" aria-label="Ferramentas de Acessibilidade">
+    <div class="conteiner-acessibilidade">
+      <span>Acessibilidade:</span>
+      <button type="button" id="btn-contraste" aria-label="Alternar modo de alto contraste">Alto Contraste</button>
+      <button type="button" id="btn-aumentar-fonte" aria-label="Aumentar o tamanho do texto">A+ Aumentar Fonte</button>
+      <button type="button" id="btn-diminuir-fonte" aria-label="Diminuir o tamanho do texto">A- Diminuir Fonte</button>
+    </div>
+  </aside>
+
   <!-- Menu Semântico Padronizado -->
   <header>
-    <nav aria-label="Navegação Principal">
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="solucao.html" aria-current="page">Solução</a></li>
-        <li><a href="impacto.html">Impacto</a></li>
-        <li><a href="equipe.html">Equipe</a></li>
-      </ul>
-    </nav>
+    <div class="conteiner-topo">
+      <div class="marca">
+        <img src="img/logo-sem-palavras.png" alt="Logotipo Cidadão Conectado: dois idosos conectados por sinal de rede">
+        <p class="logo-texto">Cidadão<strong>Conectado</strong></p>
+      </div>
+      <nav aria-label="Navegação Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="solucao.html" aria-current="page">Solução</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="equipe.html">Equipe</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Conteúdo Principal Exclusivo -->
@@ -61,23 +79,24 @@
     <section class="area-resultados">
       <h2>Serviços Encontrados</h2>
       <div id="vitrine-servicos" class="grade-servicos" aria-live="polite">
-        <!-- preencher dinamicamente via JS -->
+        <!-- preenchido dinamicamente via JS -->
       </div>
     </section>
 
-    <!-- Bloco 4: Nenhuma página sem saída (Diferencial da página 22) -->
+    <!-- Bloco 4: Nenhuma página sem saída -->
     <section class="chamada-ajuda">
       <p>Ficou com alguma dúvida sobre como solicitar um benefício?</p>
       <a href="impacto.html">Peça orientação gratuita em nossa página de Impacto</a>
     </section>
-  </main> <!-- FECHAMENTO CORRETO DO MAIN -->
+  </main>
 
-  <!-- Rodapé Semântico fora do main -->
+  <!-- Rodapé Semântico -->
   <footer>
     <p>Global Solution 2026/2 · Engenharia de Software FIAP · Projeto CitizenTech</p>
   </footer>
 
-  <!-- Scripts chamados na ordem certa antes de fechar o body -->
+  <!-- Scripts -->
+  <script src="js/acessibilidade.js"></script>
   <script src="js/dados.js"></script>
   <script src="js/simulacao.js"></script>
 </body>

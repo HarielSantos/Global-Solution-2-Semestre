@@ -5,22 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impacto Social e Contato | Serviços e Direitos</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/impacto.css">
+  <link rel="icon" type="image/png" href="img/logo-sem-palavras.png">
 </head>
 <body>
 
   <!-- Atalho de acessibilidade para teclado -->
   <a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
 
-  <!-- Menu padronizado: repare que agora o link ativo é o 'Impacto' -->
+  <!-- Barra de Acessibilidade Padronizada -->
+  <aside class="barra-acessibilidade" aria-label="Ferramentas de Acessibilidade">
+    <div class="conteiner-acessibilidade">
+      <span>Acessibilidade:</span>
+      <button type="button" id="btn-contraste" aria-label="Alternar modo de alto contraste">Alto Contraste</button>
+      <button type="button" id="btn-aumentar-fonte" aria-label="Aumentar o tamanho do texto">A+ Aumentar Fonte</button>
+      <button type="button" id="btn-diminuir-fonte" aria-label="Diminuir o tamanho do texto">A- Diminuir Fonte</button>
+    </div>
+  </aside>
+
+  <!-- Cabeçalho e Menu Semântico -->
   <header>
-    <nav aria-label="Navegação Principal">
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="solucao.html">Solução</a></li>
-        <li><a href="impacto.html" aria-current="page">Impacto</a></li>
-        <li><a href="equipe.html">Equipe</a></li>
-      </ul>
-    </nav>
+    <div class="conteiner-topo">
+      <div class="marca">
+        <img src="img/logo-sem-palavras.png" alt="Logotipo Cidadão Conectado: dois idosos conectados por sinal de rede">
+        <p class="logo-texto">Cidadão<strong>Conectado</strong></p>
+      </div>
+      <nav aria-label="Navegação Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="solucao.html">Solução</a></li>
+          <li><a href="impacto.html" aria-current="page">Impacto</a></li>
+          <li><a href="equipe.html">Equipe</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main id="conteudo">
@@ -35,8 +53,7 @@
           <li><strong>Login Seguro e Sem Senhas Complexas:</strong> Autenticação por imagens dinâmicas que mudam a cada acesso, garantindo segurança total sem exigir a memorização de códigos difíceis.</li>
           <li><strong>Acessibilidade para Todos:</strong> Atendimento por comando de voz, botões intuitivos e linguagem simples, ideal para idosos e pessoas com baixa alfabetização digital.</li>
           <li><strong>Orientação por Inteligência Artificial:</strong> Assistente inteligente integrado ao Gov.br que tira dúvidas e guia o cidadão passo a passo na solicitação de serviços.</li>
-          <li><strong>Burocracia:</strong> Centralização de saúde, educação, documentos e benefícios sociais em um só lugar, eliminando a necessidade de baixar vários aplicativos.</li>
-      
+          <li><strong>Redução da Burocracia:</strong> Centralização de saúde, educação, documentos e benefícios sociais em um só lugar, eliminando a necessidade de baixar vários aplicativos.</li>
         </ul>
       </article>
     </section>
@@ -50,28 +67,28 @@
         <!-- Campo Nome -->
         <div>
           <label for="nome">Seu Nome Completo:</label>
-          <input type="text" id="nome" name="nome" placeholder="Ex.: Maria de Souza" required>
+          <input type="text" id="nome" name="nome" placeholder="Ex.: Maria de Souza" required aria-describedby="erro-nome">
           <p id="erro-nome" class="mensagem-erro" role="alert"></p>
         </div>
 
         <!-- Campo Contato -->
         <div>
           <label for="contato">Telefone ou E-mail:</label>
-          <input type="text" id="contato" name="contato" placeholder="Ex.: (11) 99999-9999 ou seu@email.com" required>
+          <input type="text" id="contato" name="contato" placeholder="Ex.: (11) 99999-9999 ou seu@email.com" required aria-describedby="erro-contato">
           <p id="erro-contato" class="mensagem-erro" role="alert"></p>
         </div>
 
         <!-- Campo Mensagem -->
         <div>
           <label for="mensagem">Qual é a sua dúvida ou necessidade?</label>
-          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva aqui o serviço ou documento que você procura..." required></textarea>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva aqui o serviço ou documento que você procura..." required aria-describedby="erro-mensagem"></textarea>
           <p id="erro-mensagem" class="mensagem-erro" role="alert"></p>
         </div>
 
         <!-- Botão de envio -->
         <button type="submit">Enviar Solicitação</button>
 
-        <!-- Mensagem de sucesso que o JS vai preencher na própria tela -->
+        <!-- Mensagem de sucesso na tela -->
         <p id="msg-sucesso" class="mensagem-sucesso" role="status"></p>
       </form>
     </section>
@@ -81,7 +98,8 @@
     <p>Global Solution 2026/2 · Engenharia de Software FIAP · Projeto CitizenTech</p>
   </footer>
 
-  <!-- Script para validar os campos sem alert() -->
+  <!-- Scripts -->
+  <script src="js/acessibilidade.js"></script>
   <script src="js/validacao.js"></script>
 </body>
 </html>
