@@ -1,27 +1,68 @@
 
-function simularBeneficios(idade, rendaPorPessoa) {
-  const beneficios = [];
+document.addEventListener("DOMContentLoaded", function () {
+  const vitrine = document.getElementById("vitrine-servicos");
+  const contador = document.getElementById("contador-resultados");
+  const campoBusca = document.getElementById("busca-termo");
+  const filtroCategoria = document.getElementById("filtro-categoria");
 
-  if (idade >= 65 && rendaPorPessoa <= 405.25) {
-    beneficios.push({
-      nome: "BPC",
-      mensagem: "Você pode atender aos critérios iniciais de idade e renda do BPC. Outros requisitos precisam ser avaliados."
-    });
+  if (!vitrine || !contador || !campoBusca || !filtroCategoria) {
+    return;
   }
 
-  if (idade >= 60) {
-    beneficios.push({
-      nome: "Direitos da pessoa idosa",
-      mensagem: "Você pode ter acesso a direitos e serviços específicos para pessoas idosas."
-    });
+  function renderizarServicos(lista) {
+    vitrine.innerHTML = "";
+
+    if (lista.length === 0) {
+      contador.textContent = "Nenhum serviço encontrado.";
+      vitrine.innerHTML = `
+        <article class="cartao-vazio">
+          <h3>Nenhum direito localizado para esta busca</h3>
+          <p>Tente usar termos mais simples, como "remédio", "luz", "idoso" ou selecione "Todos os serviços".</p>
+        </article>
+      `;
+      return;
+    }
+
+    contador.textContent = `Exibindo ${lista.length} serviço(s) disponível(is):`;
+
+    for (let i = 0; i < lista.length; i++) {
+      const item = lista[i];
+      const cartao = document.createElement("article");
+      cartao.className = "cartao-servico";
+
+      cartao.innerHTML = `
+        <span class="tag-categoria">${item.categoriaNome}</span>
+        <h3>${item.nome}</h3>
+        <p><strong>Quem tem direito:</strong> ${item.publico}</p>
+        <p>${item.descricao}</p>
+        <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="botao-secundario">
+          Ver no portal oficial Gov.br
+        </a>
+      `;
+
+      vitrine.appendChild(cartao);
+    }
   }
 
-  if (beneficios.length === 0) {
-    beneficios.push({
-      nome: "Orientação",
-      mensagem: "Não identificamos benefícios nesta simulação simplificada. Consulte os canais oficiais para avaliar seus direitos."
+  function filtrar() {
+    const termo = campoBusca.value.toLowerCase().trim();
+    const categoriaSelecionada = filtroCategoria.value;
+
+    const filtrados = servicos.filter(function (servico) {
+      const bateuCategoria = (categoriaSelecionada === "todos") || (servico.categoria === categoriaSelecionada);
+      const bateuTermo = (termo === "") || 
+        servico.nome.toLowerCase().includes(termo) ||
+        servico.descricao.toLowerCase().includes(termo) ||
+        servico.publico.toLowerCase().includes(termo);
+
+      return bateuCategoria && bateuTermo;
     });
+
+    renderizarServicos(filtrados);
   }
 
-  return beneficios;
-}
+  campoBusca.addEventListener("input", filtrar);
+  filtroCategoria.addEventListener("change", filtrar);
+
+  renderizarServicos(servicos);
+});

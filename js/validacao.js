@@ -1,31 +1,77 @@
+// js/validacao.js — Validação acessível sem alert() [F04-02, F07-09]
 
 document.addEventListener("DOMContentLoaded", function () {
-  const formulario = document.querySelector("#formulario");
-  const mensagem = document.querySelector("#mensagem");
+  const form = document.getElementById("form-contato");
+  if (!form) return;
 
-  if (!formulario || !mensagem) {
-    return;
-  }
+  const campoNome = document.getElementById("nome");
+  const campoContato = document.getElementById("contato");
+  const campoMensagem = document.getElementById("mensagem");
 
-  formulario.addEventListener("submit", function (evento) {
+  const erroNome = document.getElementById("erro-nome");
+  const erroContato = document.getElementById("erro-contato");
+  const erroMensagem = document.getElementById("erro-mensagem");
+  const msgSucesso = document.getElementById("msg-sucesso");
+
+  form.addEventListener("submit", function (evento) {
     evento.preventDefault();
+    
+    erroNome.textContent = "";
+    erroContato.textContent = "";
+    erroMensagem.textContent = "";
+    msgSucesso.textContent = "";
 
-    const nome = document.querySelector("#nome").value.trim();
-    const idade = Number(document.querySelector("#idade").value);
+    campoNome.removeAttribute("aria-invalid");
+    campoContato.removeAttribute("aria-invalid");
+    campoMensagem.removeAttribute("aria-invalid");
 
-    if (nome.length < 3) {
-      mensagem.textContent = "Digite seu nome com pelo menos 3 letras.";
-      mensagem.style.color = "red";
+    let formValido = true;
+
+    const nomeValor = campoNome.value.trim();
+    if (nomeValor === "") {
+      erroNome.textContent = "Por favor, digite o seu nome completo.";
+      campoNome.setAttribute("aria-invalid", "true");
+      formValido = false;
+    } else if (nomeValor.length < 3) {
+      erroNome.textContent = "O nome precisa ter pelo menos 3 letras.";
+      campoNome.setAttribute("aria-invalid", "true");
+      formValido = false;
+    }
+
+    const contatoValor = campoContato.value.trim();
+    if (contatoValor === "") {
+      erroContato.textContent = "Por favor, informe um telefone ou e-mail para retorno.";
+      campoContato.setAttribute("aria-invalid", "true");
+      formValido = false;
+    } else if (contatoValor.indexOf("@") === -1 && contatoValor.length < 8) {
+      erroContato.textContent = "Digite um e-mail com @ ou um telefone com DDD (mínimo 8 dígitos).";
+      campoContato.setAttribute("aria-invalid", "true");
+      formValido = false;
+    }
+
+    const mensagemValor = campoMensagem.value.trim();
+    if (mensagemValor === "") {
+      erroMensagem.textContent = "Descreva resumidamente qual benefício ou documento você procura.";
+      campoMensagem.setAttribute("aria-invalid", "true");
+      formValido = false;
+    } else if (mensagemValor.length < 10) {
+      erroMensagem.textContent = "A mensagem está muito curta. Conte um pouco mais sobre sua dúvida.";
+      campoMensagem.setAttribute("aria-invalid", "true");
+      formValido = false;
+    }
+
+    if (!formValido) {
+      if (campoNome.getAttribute("aria-invalid") === "true") {
+        campoNome.focus();
+      } else if (campoContato.getAttribute("aria-invalid") === "true") {
+        campoContato.focus();
+      } else {
+        campoMensagem.focus();
+      }
       return;
     }
 
-    if (!Number.isInteger(idade) || idade < 0 || idade > 120) {
-      mensagem.textContent = "Digite uma idade válida.";
-      mensagem.style.color = "red";
-      return;
-    }
-
-    mensagem.textContent = "Dados preenchidos corretamente!";
-    mensagem.style.color = "green";
+    msgSucesso.textContent = "Pronto! Sua solicitação foi recebida. Nossa equipe de assistência entrará em contato em breve.";
+    form.reset();
   });
 });

@@ -1,48 +1,69 @@
 # Cidadão Conectado — CitizenTech (Global Solution 2026/2)
 
-> **FIAP Graduação** · 1º Ano · Engenharia de Software ON (Turmas 1ESOA e 1ESOB)  
-> **Tema:** CitizenTech — Tecnologia com o cidadão no centro da inovação  
-> **Eixo Escolhido:** Serviços e Direitos  
+> **FIAP Graduação** · 1º Ano · Engenharia de Software ON  
+> **Grupo:** Cidadão Conectado  
+> **Tema:** CitizenTech — Serviços e Direitos (ODS 10)  
 
 ---
 
 ## 📌 Descrição do Projeto
-Plataforma digital acessível e humanizada desenvolvida para simplificar o acesso a benefícios sociais, saúde, documentos e aposentadoria para idosos e pessoas com baixa literacia digital. A solução centraliza informações dispersas em uma interface limpa, com navegação guiada, comandos visuais, suporte a contraste e consulta interativa de direitos sem burocracia ou termos técnicos complexos.
+O **Cidadão Conectado** é uma plataforma digital acessível e humanizada desenvolvida para simplificar o acesso a benefícios sociais, saúde, documentos e aposentadoria para idosos e pessoas com baixa literacia digital. A solução centraliza informações dispersas em uma interface limpa, com navegação guiada, comandos visuais, suporte a alto contraste e consulta interativa de direitos sem burocracia.
 
 ---
 
 ## 👥 Cidadão Beneficiado e o Problema Real
-
-* **Quem é o cidadão:** Pessoas com 60 anos ou mais e brasileiros em situação de vulnerabilidade com pouca familiaridade com smartphones e computadores.
-* **O Problema:** A digitalização acelerada dos serviços públicos concentrou o acesso a direitos fundamentais em aplicativos difíceis de operar, com regras de senhas complexas e excesso de termos jurídicos. Isso gerou exclusão e dependência de intermediários.
+* **Quem é o cidadão:** Pessoas com 60 anos ou mais e brasileiros em situação de vulnerabilidade com pouca familiaridade digital.
+* **O Problema:** A digitalização dos serviços públicos concentrou o acesso a direitos em aplicativos complexos e cheios de barreiras cognitivas.
 * **Dados Reais e Fontes Oficiais:**
-  * **32,1 milhões de idosos** vivem no Brasil, representando 15,6% da população nacional (*Fonte: IBGE — Censo Demográfico*).
-  * **Mais de 8 milhões de idosos** permanecem completamente excluídos da internet (*Fonte: IBGE — PNAD Contínua TIC*).
-  * **66,5% dos idosos sem internet** apontam expressamente a falta de conhecimento sobre como usar a tecnologia como a barreira principal (*Fonte: IBGE — Agência de Notícias*).
-  * **Apenas 41,1% dos brasileiros conectados** utilizam ativamente serviços públicos digitais (*Fonte: Cetic.br | NIC.br — TIC Domicílios*).
+  * **32,1 milhões de idosos** no Brasil (15,6% da população nacional) — *Fonte: IBGE (Censo Demográfico)*.
+  * **+8 milhões de idosos** permanecem totalmente sem acesso à internet — *Fonte: IBGE (PNAD Contínua TIC)*.
+  * **66,5% dos idosos sem internet** apontam a falta de conhecimento como o motivo principal — *Fonte: IBGE (PNAD TIC)*.
+  * **Apenas 41,1% dos brasileiros conectados** utilizam serviços públicos digitais — *Fonte: Cetic.br | NIC.br (TIC Domicílios)*.
 
 ---
 
 ## 🎯 Conexão com os ODS da ONU
-* **ODS 10 — Redução das Desigualdades (Meta 10.2):** Promover a inclusão social, econômica e digital de todos, independentemente da idade, assegurando que o avanço tecnológico reduza as disparidades no acesso aos serviços essenciais do Estado.
+* **ODS 10 — Redução das Desigualdades (Meta 10.2):** Promove a inclusão social, econômica e digital de pessoas idosas e vulneráveis.
 
 ---
 
 ## 🚀 Como Abrir e Executar o Projeto
-O projeto foi construído seguindo as diretrizes de portabilidade da FIAP, sem necessidade de servidores, bancos de dados ou instalações prévias:
-
-1. Baixe e extraia o arquivo compactado `.zip` do projeto.
-2. Abra a pasta descompactada.
-3. Dê um **duplo clique no arquivo `index.html`** para abrir o protótipo diretamente em qualquer navegador moderno (Chrome, Edge, Firefox, Safari).
-4. Todas as páginas, simulações e formulários funcionam de forma 100% autônoma (modo *offline* compatível).
+1. Baixe e extraia o arquivo `.zip`.
+2. Dê um **duplo clique no arquivo `index.html`** para abrir no navegador.
+3. Não requer instalação de pacotes, servidores ou conexão obrigatória com banco de dados.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
-Apenas tecnologias e recursos permitidos até a Fase 7 do curso:
-* **HTML5 Semântico:** Estruturação acessível com uso de `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>` e atributos WAI-ARIA.
-* **CSS3 Moderno:** Layout responsivo construído com Flexbox e Media Queries (`@media`), sem uso de CSS *inline*.
-* **JavaScript (Vanilla JS):** Manipulação dinâmica do DOM, filtragem de *array de objetos* com dados de serviços e validação de formulário na própria tela (sem `alert()`).
+* **HTML5 Semântico:** Estrutura acessível com tags semânticas e atributos WAI-ARIA.
+* **CSS3 Modular:** 100% externo, sem nenhum uso de CSS inline (`style=""`), com Flexbox, Grid e Media Queries responsivas.
+* **JavaScript Puro (Vanilla JS):** Manipulação dinâmica de DOM, catálogo de serviços em array de objetos, acessibilidade e validação de formulário na tela sem uso de `alert()`.
+
+---
+
+## 📁 Estrutura de Pastas e Arquivos
+
+```text
+cidadao-conectado/
+├── css/
+│   ├── style.css             
+│   ├── home.css             
+│   ├── solucao.css         
+│   ├── impacto.css         
+│   └── equipe.css          
+├── js/
+│   ├── acessibilidade.js     
+│   ├── dados.js      
+│   ├── simulacao.js     
+│   └── validacao.js         
+├── img/
+│   └── logo-sem-palavras.png
+├── index.html                
+├── solucao.html             
+├── impacto.html            
+├── equipe.html              
+├── informacoes_grupo.txt    
+└── README.md                 
 
 ## 👥 Integrantes do Grupo
 
@@ -52,23 +73,3 @@ Apenas tecnologias e recursos permitidos até a Fase 7 do curso:
 | MATHEUS MARQUES DE SOUZA SANTOS | RM rm574122 | 1ESOA | Estilização CSS e Design Responsivo |
 | Mike Roberson Almeida | RM rm570333 | 1ESOA | Lógica JavaScript e Simulação Interativa |
 | Felipe Matos de Miranda | RM rm568892 | 1ESOA | Pesquisa de Conteúdo e Roteiro/Vídeo Pitch |
-
----
-
-## 📁 Estrutura de Pastas do Projeto
-
-```text
-Global-Solution-2-Semestre/
-├── css/
-│   └── style.css            # Estilização completa e responsiva
-├── js/
-│   ├── dados.js             # Base com 10+ serviços em array de objetos
-│   ├── simulacao.js         # Lógica de busca, filtro e injeção no DOM
-│   └── validacao.js         # Validação de campos e mensagens de feedback
-├── img/
-│   └── ...                  # Imagens e ícones otimizados (com alt)
-├── index.html               # Página inicial (Problema, Dados e ODS)
-├── solucao.html             # Simulação Interativa de Direitos (4 pontos)
-├── impacto.html             # Impacto Social e Formulário de Apoio
-├── equipe.html              # Apresentação do grupo e papéis
-└── README.md                # Documentação técnica do projeto
