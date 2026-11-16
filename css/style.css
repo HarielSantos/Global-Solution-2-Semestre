@@ -290,6 +290,12 @@ body.alto-contraste :is(.botao-destaque, button, .botao-secundario, .chamada-aju
 }
 
 
-/* Ajustes de textos longos */
 main > *, .painel-estatisticas, .card-ods, .card-passo { min-width: 0; }
 .link-fonte a { overflow-wrap: anywhere; }
+
+html.fonte-80  { font-size: 80%; }
+html.fonte-90  { font-size: 90%; }
+html.fonte-110 { font-size: 110%; }
+html.fonte-120 { font-size: 120%; }
+html.fonte-130 { font-size: 130%; }
+html.fonte-140 { font-size: 140%; }

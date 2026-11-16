@@ -1,4 +1,3 @@
-
 function iniciarAcessibilidade() {
   const btnContraste = document.getElementById("btn-contraste");
   const btnAumentar = document.getElementById("btn-aumentar-fonte");
@@ -12,11 +11,25 @@ function iniciarAcessibilidade() {
 
   let zoom = 100;
 
+  function aplicarZoom() {
+    document.documentElement.classList.remove(
+      "fonte-80",
+      "fonte-90",
+      "fonte-110",
+      "fonte-120",
+      "fonte-130",
+      "fonte-140"
+    );
+    if (zoom !== 100) {
+      document.documentElement.classList.add("fonte-" + zoom);
+    }
+  }
+
   if (btnAumentar) {
     btnAumentar.onclick = function () {
       if (zoom < 140) {
         zoom += 10;
-        document.body.style.fontSize = zoom + "%";
+        aplicarZoom();
       }
     };
   }
@@ -25,7 +38,7 @@ function iniciarAcessibilidade() {
     btnDiminuir.onclick = function () {
       if (zoom > 80) {
         zoom -= 10;
-        document.body.style.fontSize = zoom + "%";
+        aplicarZoom();
       }
     };
   }

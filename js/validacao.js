@@ -1,4 +1,3 @@
-// js/validacao.js — Validação acessível sem alert() [F04-02, F07-09]
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("form-contato");

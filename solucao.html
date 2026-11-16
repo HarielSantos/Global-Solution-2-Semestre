@@ -10,10 +10,8 @@
 </head>
 <body>
 
-  <!-- Atalho de acessibilidade para navegação via teclado -->
   <a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
 
-  <!-- Barra de Acessibilidade Padronizada -->
   <aside class="barra-acessibilidade" aria-label="Ferramentas de Acessibilidade">
     <div class="conteiner-acessibilidade">
       <span>Acessibilidade:</span>
@@ -23,7 +21,6 @@
     </div>
   </aside>
 
-  <!-- Menu Semântico Padronizado -->
   <header>
     <div class="conteiner-topo">
       <div class="marca">
@@ -41,25 +38,21 @@
     </div>
   </header>
 
-  <!-- Conteúdo Principal Exclusivo -->
   <main id="conteudo">
-    <!-- Bloco 1: Apresentação da Ferramenta -->
+
     <section class="apresentacao-solucao">
       <h1>Consulta Interativa de Direitos e Serviços</h1>
       <p>Selecione uma área ou digite uma palavra-chave para descobrir quais benefícios e serviços públicos você e sua família têm direito de acessar.</p>
     </section>
 
-    <!-- Bloco 2: Controles da Simulação (Filtros e Busca) [F04-02] -->
     <section class="area-filtros">
       <h2>Encontre o que você precisa</h2>
 
-      <!-- Busca por texto -->
       <div class="campo-busca">
         <label for="busca-termo">Buscar por nome ou palavra-chave:</label>
         <input type="search" id="busca-termo" placeholder="Ex.: Farmácia Popular, BPC, Tarifa Social...">
       </div>
-      
-      <!-- Filtro por categoria -->
+
       <div class="campo-categoria">
         <label for="filtro-categoria">Ou filtre por área:</label>
         <select id="filtro-categoria">
@@ -71,31 +64,25 @@
         </select>
       </div>
 
-      <!-- Contador dinâmico de feedback acessível -->
       <p id="contador-resultados" aria-live="polite">Carregando serviços disponíveis...</p>
     </section>
 
-    <!-- Bloco 3: Vitrine onde o JS vai desenhar os 10 cartões -->
     <section class="area-resultados">
       <h2>Serviços Encontrados</h2>
       <div id="vitrine-servicos" class="grade-servicos" aria-live="polite">
-        <!-- preenchido dinamicamente via JS -->
       </div>
     </section>
 
-    <!-- Bloco 4: Nenhuma página sem saída -->
     <section class="chamada-ajuda">
       <p>Ficou com alguma dúvida sobre como solicitar um benefício?</p>
       <a href="impacto.html">Peça orientação gratuita em nossa página de Impacto</a>
     </section>
   </main>
 
-  <!-- Rodapé Semântico -->
   <footer>
     <p>Global Solution 2026/2 · Engenharia de Software FIAP · Projeto CitizenTech</p>
   </footer>
 
-  <!-- Scripts -->
   <script src="js/acessibilidade.js"></script>
   <script src="js/dados.js"></script>
   <script src="js/simulacao.js"></script>

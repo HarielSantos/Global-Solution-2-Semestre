@@ -1,4 +1,4 @@
-// js/dados.js — Base de dados com 12 serviços cidadãos (Exigência: >= 10 registros)
+
 const servicos = [
   {
     id: 1,

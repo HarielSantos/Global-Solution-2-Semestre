@@ -10,10 +10,8 @@
 </head>
 <body>
 
-  <!-- Atalho de acessibilidade para teclado -->
   <a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
 
-  <!-- Barra de Acessibilidade Padronizada -->
   <aside class="barra-acessibilidade" aria-label="Ferramentas de Acessibilidade">
     <div class="conteiner-acessibilidade">
       <span>Acessibilidade:</span>
@@ -23,7 +21,6 @@
     </div>
   </aside>
 
-  <!-- Cabeçalho e Menu Semântico -->
   <header>
     <div class="conteiner-topo">
       <div class="marca">
@@ -42,53 +39,48 @@
   </header>
 
   <main id="conteudo">
-    <!-- Bloco 1: O Impacto Social do Projeto -->
     <section>
       <h1>Impacto Social</h1>
-      <p>Uma plataforma digital que reúne, em um único lugar, os principais serviços e direitos do cidadão brasileiro, facilitando o acesso à saúde, educação, documentos, benefícios sociais e participação cidadã. Integrada ao Gov.br, a solução conta com uma inteligência artificial capaz de orientar os usuários, esclarecer dúvidas e auxiliar na solicitação de serviços. Além disso, a plataforma tem como prioridade a inclusão digital, com recursos voltados especialmente para idosos, pessoas com dificuldades de leitura ou pouca familiaridade com a tecnologia.</p>
-      
+      <p>
+        O Cidadão Conectado reúne, em um único lugar, orientações claras sobre os principais serviços e direitos do cidadão brasileiro, facilitando o acesso à saúde, documentos, benefícios sociais e direitos da pessoa idosa. Neste protótipo funcional, o usuário já consulta e filtra serviços sem burocracia e conta com recursos reais de acessibilidade; em evoluções futuras, a plataforma prevê integração com o Gov.br e assistência guiada.
+      </p>
+
       <article>
         <h2>Benefícios Concretos</h2>
         <ul>
-          <li><strong>Login Seguro e Sem Senhas Complexas:</strong> Autenticação por imagens dinâmicas que mudam a cada acesso, garantindo segurança total sem exigir a memorização de códigos difíceis.</li>
-          <li><strong>Acessibilidade para Todos:</strong> Atendimento por comando de voz, botões intuitivos e linguagem simples, ideal para idosos e pessoas com baixa alfabetização digital.</li>
-          <li><strong>Orientação por Inteligência Artificial:</strong> Assistente inteligente integrado ao Gov.br que tira dúvidas e guia o cidadão passo a passo na solicitação de serviços.</li>
-          <li><strong>Redução da Burocracia:</strong> Centralização de saúde, educação, documentos e benefícios sociais em um só lugar, eliminando a necessidade de baixar vários aplicativos.</li>
+          <li><strong>Redução da Burocracia (disponível no MVP):</strong> centralização de saúde, documentos e benefícios sociais em linguagem simples, sem termos jurídicos difíceis.</li>
+          <li><strong>Acessibilidade para Todos (disponível no MVP):</strong> navegação completa por teclado, botões amplos, alto contraste e ajuste de tamanho de fonte para idosos e pessoas com baixa familiaridade digital.</li>
+          <li><strong>Login Seguro e Sem Senhas Complexas (evolução futura):</strong> autenticação por imagens dinâmicas que mudam a cada acesso, evitando a memorização de códigos difíceis.</li>
+          <li><strong>Orientação por Inteligência Artificial (evolução futura):</strong> assistente integrado ao Gov.br com comandos de voz para guiar o cidadão passo a passo na solicitação de serviços.</li>
         </ul>
       </article>
     </section>
 
-    <!-- Bloco 2: Formulário de Solicitação de Apoio / Contato (Requisito 04) -->
     <section>
       <h2>Fale Conosco ou Peça Orientação</h2>
       <p>Precisa de ajuda para acessar algum benefício? Deixe seus dados abaixo:</p>
 
       <form id="form-contato" novalidate>
-        <!-- Campo Nome -->
         <div>
           <label for="nome">Seu Nome Completo:</label>
           <input type="text" id="nome" name="nome" placeholder="Ex.: Maria de Souza" required aria-describedby="erro-nome">
           <p id="erro-nome" class="mensagem-erro" role="alert"></p>
         </div>
 
-        <!-- Campo Contato -->
         <div>
           <label for="contato">Telefone ou E-mail:</label>
           <input type="text" id="contato" name="contato" placeholder="Ex.: (11) 99999-9999 ou seu@email.com" required aria-describedby="erro-contato">
           <p id="erro-contato" class="mensagem-erro" role="alert"></p>
         </div>
 
-        <!-- Campo Mensagem -->
         <div>
           <label for="mensagem">Qual é a sua dúvida ou necessidade?</label>
           <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva aqui o serviço ou documento que você procura..." required aria-describedby="erro-mensagem"></textarea>
           <p id="erro-mensagem" class="mensagem-erro" role="alert"></p>
         </div>
 
-        <!-- Botão de envio -->
         <button type="submit">Enviar Solicitação</button>
 
-        <!-- Mensagem de sucesso na tela -->
         <p id="msg-sucesso" class="mensagem-sucesso" role="status"></p>
       </form>
     </section>
@@ -98,7 +90,6 @@
     <p>Global Solution 2026/2 · Engenharia de Software FIAP · Projeto CitizenTech</p>
   </footer>
 
-  <!-- Scripts -->
   <script src="js/acessibilidade.js"></script>
   <script src="js/validacao.js"></script>
 </body>
