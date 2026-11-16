@@ -40,7 +40,7 @@ O **Cidadão Conectado** é uma plataforma digital acessível e humanizada desen
 * **JavaScript Puro (Vanilla JS):** Manipulação dinâmica de DOM, catálogo de serviços em array de objetos, acessibilidade e validação de formulário na tela sem uso de `alert()`.
 
 ## Uso de IA generativa
-* Ferramenta de inteligência artificial Gemini foram utilizadas exclusivamente para o esclarecimento de dúvidas técnicas e como apoio na etapa de ideação do projeto.
+* A ferramenta de inteligência artificial Gemini foi utilizada exclusivamente para o esclarecimento de dúvidas técnicas e como apoio na etapa de ideação do projeto.
 
 ---
 
