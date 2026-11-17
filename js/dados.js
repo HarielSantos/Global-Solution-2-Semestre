@@ -1,4 +1,3 @@
-
 const servicos = [
   {
     id: 1,
@@ -15,7 +14,7 @@ const servicos = [
     categoria: "saude",
     categoriaNome: "Saúde e Medicamentos",
     publico: "Cidadãos de qualquer idade e idosos",
-    descricao: "Medicamentos gratuitos para diabetes, hipertensão, asma e osteoporose em farmácias conveniadas.",
+    descricao: "Retirada gratuita de remédios e medicamentos para diabetes, hipertensão, asma e osteoporose em farmácias conveniadas.",
     link: "https://www.gov.br/saude/pt-br/composicao/sectics/farmacia-popular"
   },
   {
@@ -24,7 +23,7 @@ const servicos = [
     categoria: "renda",
     categoriaNome: "Renda e Benefícios",
     publico: "Famílias no CadÚnico ou beneficiários do BPC",
-    descricao: "Desconto de até 65% na conta de luz para famílias de baixa renda e idosos.",
+    descricao: "Garante 100% de desconto na conta de luz (tarifa de energia elétrica) para consumo de até 80 kWh por mês (regra vigente desde julho de 2025).",
     link: "https://www.gov.br/aneel/pt-br/assuntos/tarifas/tarifa-social"
   },
   {
@@ -42,7 +41,7 @@ const servicos = [
     categoria: "documentos",
     categoriaNome: "Documentos e Cidadania",
     publico: "Famílias de baixa renda",
-    descricao: "Porta de entrada para todos os benefícios sociais federais, estaduais e municipais.",
+    descricao: "Porta de entrada para os principais benefícios sociais federais, estaduais e municipais.",
     link: "https://cadunico.dataprev.gov.br/"
   },
   {
@@ -51,8 +50,8 @@ const servicos = [
     categoria: "documentos",
     categoriaNome: "Documentos e Cidadania",
     publico: "Todos os cidadãos brasileiros",
-    descricao: "Novo documento de identidade com número único de CPF e emissão prioritária para idosos.",
-    link: "https://www.gov.br/governodigital/pt-br/identidade/identidade-digital"
+    descricao: "Novo documento de identidade com número único de CPF e atendimento prioritário para idosos.",
+    link: "https://www.gov.br/governodigital/pt-br/identidade"
   },
   {
     id: 7,
@@ -69,26 +68,26 @@ const servicos = [
     categoria: "renda",
     categoriaNome: "Renda e Benefícios",
     publico: "Mulheres a partir de 62 anos e homens a partir de 65",
-    descricao: "Benefício previdenciário pago aos trabalhadores que atingiram a idade mínima e tempo de contribuição.",
+    descricao: "Benefício previdenciário pago aos trabalhadores que atingiram a idade mínima e o tempo de contribuição.",
     link: "https://meu.inss.gov.br"
   },
   {
     id: 9,
-    nome: "Isenção ou Desconto de IPTU para Aposentados",
+    nome: "Isenção de IPTU e Direitos da Pessoa Idosa",
     categoria: "idoso",
     categoriaNome: "Direitos da Pessoa Idosa",
-    publico: "Aposentados com imóvel único",
-    descricao: "Direito municipal que reduz ou zera o IPTU para pessoas idosas com renda limitada.",
-    link: "https://www.gov.br/mds/pt-br/acoes-e-programas/assistencia-social"
+    publico: "Aposentados e pessoas com 60 anos ou mais",
+    descricao: "Muitos municípios oferecem desconto ou isenção de IPTU para aposentados com imóvel único; consulte a prefeitura da sua cidade e os direitos garantidos pelo Estatuto da Pessoa Idosa.",
+    link: "https://www.gov.br/mdh/pt-br/assuntos/pessoa-idosa"
   },
   {
     id: 10,
-    nome: "Auxílio Gás dos Brasileiros",
+    nome: "Programa Gás do Povo",
     categoria: "renda",
     categoriaNome: "Renda e Benefícios",
-    publico: "Famílias inscritas no CadÚnico e BPC",
-    descricao: "Pagamento bimestral de 100% do valor médio de um botijão de gás de cozinha de 13kg.",
-    link: "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia/auxilio-gas"
+    publico: "Famílias inscritas no CadÚnico (renda até ½ salário mínimo por pessoa)",
+    descricao: "Substituiu o antigo Auxílio Gás e garante recarga gratuita do botijão de gás de cozinha (13 kg) em revendas credenciadas.",
+    link: "https://gasdopovo.mds.gov.br/"
   },
   {
     id: 11,

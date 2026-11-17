@@ -28,6 +28,7 @@
 .cartao-servico {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   padding: 1.5rem;
   background: var(--superficie);
   border: 1px solid var(--borda);
@@ -36,8 +37,50 @@
   box-shadow: var(--sombra);
 }
 
+.tag-categoria {
+  display: inline-block;
+  margin-bottom: .5rem;
+  padding: .3rem .6rem;
+  border-radius: 6px;
+  background: #eaf2ff;
+  color: var(--azul-escuro);
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+.cartao-servico h3 {
+  margin-top: 0;
+}
+
+.cartao-servico a {
+  margin-top: auto;
+  padding-top: .75rem;
+}
+
+.cartao-vazio {
+  grid-column: 1 / -1;
+  padding: 2rem;
+  text-align: center;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
 .chamada-ajuda {
   text-align: center;
+}
+
+body.alto-contraste .cartao-vazio {
+  background: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+body.alto-contraste .tag-categoria {
+  background: #000;
+  color: #ffeb00;
+  border: 1px solid #ffeb00;
 }
 
 @media (max-width: 720px) {

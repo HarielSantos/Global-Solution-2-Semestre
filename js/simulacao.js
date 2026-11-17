@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   const vitrine = document.getElementById("vitrine-servicos");
   const contador = document.getElementById("contador-resultados");
@@ -7,6 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!vitrine || !contador || !campoBusca || !filtroCategoria) {
     return;
+  }
+
+  function normalizar(texto) {
+    return (texto || "")
+      .toString()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
   }
 
   function renderizarServicos(lista) {
@@ -35,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <h3>${item.nome}</h3>
         <p><strong>Quem tem direito:</strong> ${item.publico}</p>
         <p>${item.descricao}</p>
-        <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="botao-secundario">
-          Ver no portal oficial Gov.br
+        <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="botao-secundario" aria-label="Ver ${item.nome} no portal oficial">
+          Ver no portal oficial
         </a>
       `;
 
@@ -45,15 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function filtrar() {
-    const termo = campoBusca.value.toLowerCase().trim();
+    const termo = normalizar(campoBusca.value.trim());
     const categoriaSelecionada = filtroCategoria.value;
 
     const filtrados = servicos.filter(function (servico) {
       const bateuCategoria = (categoriaSelecionada === "todos") || (servico.categoria === categoriaSelecionada);
-      const bateuTermo = (termo === "") || 
-        servico.nome.toLowerCase().includes(termo) ||
-        servico.descricao.toLowerCase().includes(termo) ||
-        servico.publico.toLowerCase().includes(termo);
+      const bateuTermo = (termo === "") ||
+        normalizar(servico.nome).includes(termo) ||
+        normalizar(servico.descricao).includes(termo) ||
+        normalizar(servico.publico).includes(termo) ||
+        normalizar(servico.categoriaNome).includes(termo);
 
       return bateuCategoria && bateuTermo;
     });

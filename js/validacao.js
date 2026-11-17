@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("form-contato");
   if (!form) return;
@@ -14,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   form.addEventListener("submit", function (evento) {
     evento.preventDefault();
-    
+
     erroNome.textContent = "";
     erroContato.textContent = "";
     erroMensagem.textContent = "";
@@ -38,12 +37,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const contatoValor = campoContato.value.trim();
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    const apenasDigitos = contatoValor.replace(/\D/g, "");
+
     if (contatoValor === "") {
       erroContato.textContent = "Por favor, informe um telefone ou e-mail para retorno.";
       campoContato.setAttribute("aria-invalid", "true");
       formValido = false;
-    } else if (contatoValor.indexOf("@") === -1 && contatoValor.length < 8) {
-      erroContato.textContent = "Digite um e-mail com @ ou um telefone com DDD (mínimo 8 dígitos).";
+    } else if (contatoValor.includes("@")) {
+      if (!regexEmail.test(contatoValor)) {
+        erroContato.textContent = "Digite um e-mail válido (ex.: nome@email.com).";
+        campoContato.setAttribute("aria-invalid", "true");
+        formValido = false;
+      }
+    } else if (apenasDigitos.length < 10 || apenasDigitos.length > 11) {
+      erroContato.textContent = "Digite um telefone com DDD válido (10 ou 11 números) ou um e-mail.";
       campoContato.setAttribute("aria-invalid", "true");
       formValido = false;
     }
@@ -70,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    msgSucesso.textContent = "Pronto! Sua solicitação foi recebida. Nossa equipe de assistência entrará em contato em breve.";
+    msgSucesso.textContent = "Pronto! Sua solicitação simulada foi validada (em um protótipo acadêmico, nenhum dado é enviado).";
     form.reset();
   });
 });

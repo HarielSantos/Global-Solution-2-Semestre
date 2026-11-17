@@ -1,0 +1,19 @@
+==================================================
+GLOBAL SOLUTION 2026/2 — CITIZENTECH
+Engenharia de Software ON · Turma 1ESOA
+Projeto: Cidadão Conectado — Serviços e Direitos
+==================================================
+
+NOME DO GRUPO: Cidadão Conectado
+
+INTEGRANTES:
+1. Hariel Santos Da Silva — RM 570145
+2. Matheus Marques de Souza Santos — RM 574122
+3. Mike Roberson Almeida — RM 570333
+4. Felipe Matos de Miranda — RM 568892
+
+LINK DO VÍDEO PITCH (Até 3 min):
+
+
+SITE NO AR (Vercel):
+https://globalsolution-zeta.vercel.app/
