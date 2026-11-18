@@ -42,7 +42,7 @@ O **Cidadão Conectado** é uma plataforma digital acessível e humanizada desen
 ---
 
 ## 🤖 Uso de IA Generativa
-* A ferramenta **Gemini** foi utilizada para apoio na ideação, esclarecimento de dúvidas técnicas, revisão de código e textos (todos revisados e entendidos pelo grupo). *(Se usaram IA para gerar a imagem da logo, mencione aqui também).*
+* A ferramenta **Gemini** foi utilizada para apoio na ideação, esclarecimento de dúvidas técnicas, revisão de código e textos (todos revisados e entendidos pelo grupo).
 
 ---
 
@@ -85,3 +85,4 @@ SITE NO AR (Vercel):
 https://globalsolution-zeta.vercel.app/
 
 LINK DO VÍDEO PITCH (Até 3 min):
+https://youtube.com/shorts/xfI7H8uVrr0?is=ug2x_oKk1Fe2hToz
