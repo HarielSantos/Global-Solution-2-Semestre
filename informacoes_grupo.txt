@@ -11,9 +11,10 @@ INTEGRANTES:
 2. Matheus Marques de Souza Santos — RM 574122
 3. Mike Roberson Almeida — RM 570333
 4. Felipe Matos de Miranda — RM 568892
+5. Pedro Dutra Lima — RM 569816
 
 LINK DO VÍDEO PITCH (Até 3 min):
-
+https://youtube.com/shorts/xfI7H8uVrr0?is=ug2x_oKk1Fe2hToz
 
 SITE NO AR (Vercel):
 https://globalsolution-zeta.vercel.app/

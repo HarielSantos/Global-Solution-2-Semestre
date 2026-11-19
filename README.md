@@ -79,7 +79,8 @@ cidadao-conectado/
 | Hariel Santos Da Silva          | rm570145 | 1ESOA | Estrutura HTML e Acessibilidade                  |
 | Matheus Marques De Souza Santos | rm574122 | 1ESOA | Estilização CSS e Design Responsivo               |
 | Mike Roberson Almeida           | rm570333 | 1ESOA | Lógica JavaScript e Simulação Interativa |
-| Felipe Matos de Miranda         | rm568892 | 1ESOA | Pesquisa de Conteúdo e Roteiro/Vídeo Pitch |
+| Felipe Matos de Miranda         | rm568892 | 1ESOA | Pesquisa de Conteúdo e Roteiro/Vídeo Pitch    |
+| Pedro Dutra Lima                | rm569816 | 1ESOA | Revisão de Código (QA) e Edição de Vídeo
 
 SITE NO AR (Vercel):
 https://globalsolution-zeta.vercel.app/
